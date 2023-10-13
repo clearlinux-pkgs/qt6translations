@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt6translations
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qttranslations-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qttranslations-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qttranslations-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qttranslations-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0
@@ -42,15 +42,15 @@ license components for the qt6translations package.
 
 
 %prep
-%setup -q -n qttranslations-everywhere-src-6.5.3
-cd %{_builddir}/qttranslations-everywhere-src-6.5.3
+%setup -q -n qttranslations-everywhere-src-6.6.0
+cd %{_builddir}/qttranslations-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696370287
+export SOURCE_DATE_EPOCH=1697155973
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696370287
+export SOURCE_DATE_EPOCH=1697155973
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6translations
 cp %{_builddir}/qttranslations-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6translations/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
